@@ -25,7 +25,7 @@ class RunAfterCompile{
 
 let cssConfig={
         test: /\.css$/i,
-        use: ['css-loader', {loader: 'postcss-loader', options: {postcssOptions: {plugins: postCSSPlugins}}}]
+        use: ['css-loader?url=false', {loader: 'postcss-loader', options: {postcssOptions: {plugins: postCSSPlugins}}}]
     }
 
 let pages = fse.readdirSync('./app').filter(function(file){
